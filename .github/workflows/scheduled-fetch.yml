@@ -17,6 +17,7 @@ jobs:
       - name: fetch
         run: |
           deno run -A download.js
+          deno run -A makeTrend.js
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
