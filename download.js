@@ -16,5 +16,7 @@ for (const path of links) {
   await Deno.writeTextFile("data/src/sokuho" + name, CSV.encode(data));
   if (name[8] == "-") {
     await Deno.writeTextFile("data/src/sokuho/latest-" + name.substring(9), CSV.encode(data));
+  } else if (name.startsWith("week")) {
+    await Deno.writeTextFile("data/src/sokuho/latest-" + name.substring(7), CSV.encode(data));
   }
 }
