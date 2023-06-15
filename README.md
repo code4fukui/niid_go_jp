@@ -41,6 +41,7 @@
 import { CSV } from "https://js.sabae.cc/CSV.js";
 const data = await CSV.fetchJSON("https://code4fukui.github.io/niid_go_jp/data/infections.csv");
 data.forEach(d => console.log(`- [${d.name}](${d.url_about})`));
+//console.log(data.map(d => `<a href="${d.url_about}">${d.name}${d.name_alternative ? "（" + d.name_alternative + "）" : ""}</a>`).join("、"));
 ```
 
 ## アプリ
